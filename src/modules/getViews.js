@@ -1,12 +1,12 @@
 import renderArrayData from "./renderArrayData";
-const getFilter = (value, category) => {
+const getViews = () => {
 	 fetch('https://wildberrisjs-default-rtdb.firebaseio.com/db.json')
 		.then((res) => {
 			return res.json();
 		})
 		.then((data) => {
-			const filterArray = category ? data.filter(item => item[category] === value) : data
-			localStorage.setItem('key', JSON.stringify(filterArray));
+			const filterArray =  data
+			localStorage.setItem('key', JSON.stringify(data));
 
 			if (window.location.pathname !== '/goods.html') {
 				window.location.href = '/goods.html';
@@ -14,11 +14,8 @@ const getFilter = (value, category) => {
 				renderArrayData(filterArray);
 			}
 		});
-
-
-
 		// if(localStorage.getItem('key') && window.location.pathname === '/goods.html') {
 		// 	renderArrayData(JSON.parse(localStorage.getItem('key')))
 		// }
 }		
-export default getFilter
+export default getViews

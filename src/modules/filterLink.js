@@ -1,4 +1,5 @@
-import getFilter from "./getFilter"
+import getFilter from "./getFilter";
+// import getViews from "./getViews";
 const filterLink = () => {
 const links = document.querySelectorAll('.navigation-link');
 links.forEach(link => {
