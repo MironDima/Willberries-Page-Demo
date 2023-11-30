@@ -1,4 +1,4 @@
-import getPost from "./getPost"
+import getFilter from "./getFilter"
 const filterLink = () => {
 const links = document.querySelectorAll('.navigation-link');
 links.forEach(link => {
@@ -6,7 +6,7 @@ links.forEach(link => {
 		e.preventDefault()
 		const linkValue = link.textContent;
 		const dataAtributte = link.dataset.field; //dataset можно получить атрибут
-		getPost(linkValue,dataAtributte);
+		getFilter(linkValue,dataAtributte);
 	})
 })
 }

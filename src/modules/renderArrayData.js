@@ -1,5 +1,5 @@
 const renderArrayData = (array) => {
-	JSON.parse(localStorage.getItem('key'))
+	JSON.parse(localStorage.getItem('key'));
 	const containerCard = document.querySelector('.long-goods-list');
 	containerCard.innerHTML = ''
 	
