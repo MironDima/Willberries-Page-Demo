@@ -2,12 +2,10 @@ const renderArrayData = (array) => {
 	JSON.parse(localStorage.getItem('key'));
 	const containerCard = document.querySelector('.long-goods-list');
 	containerCard.innerHTML = ''
-	
 	array.forEach(item => {
 		const cardBlock = document.createElement('div');
 		cardBlock.classList.add('col-lg-3');
 		cardBlock.classList.add('col-sm-6');
-
 		cardBlock.innerHTML = `
 		<div class="goods-card">
 			<span class="label ${item.label  ? null : 'd-none'}" >${item.label}</span>
@@ -19,7 +17,6 @@ const renderArrayData = (array) => {
 			</button>
 			</div>
 		`
-		console.log(item);
 		containerCard.append(cardBlock)
 	});
 }

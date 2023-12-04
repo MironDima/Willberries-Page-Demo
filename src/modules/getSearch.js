@@ -5,20 +5,13 @@ const getSearch = (value) => {
 			return res.json();
 		})
 		.then((data) => {
-			const filterArray =  data.filter(item => {
-				return item.name.toLowerCase().includes(value.toLowerCase())
-			})
-			console.log(value);
+			const filterArray =  data.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
 			localStorage.setItem('key', JSON.stringify(data));
-
 			if (window.location.pathname !== '/goods.html') {
 				window.location.href = '/goods.html';
 			}else {
 				renderArrayData(filterArray);
 			}
 		});
-		// if(localStorage.getItem('key') && window.location.pathname === '/goods.html') {
-		// 	renderArrayData(JSON.parse(localStorage.getItem('key')))
-		// }
 }		
 export default getSearch

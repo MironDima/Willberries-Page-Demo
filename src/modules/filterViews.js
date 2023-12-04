@@ -1,14 +1,12 @@
 import getViews from "./getViews";
 const filterViews = () => {
 	const moreBtn = document.querySelector('.more');
-	try {
+	if (moreBtn) { 
 		moreBtn.addEventListener('click', (e) => {
-			e.preventDefault()
-			getViews()
+			console.log('est');
+			e.preventDefault();
+			getViews();
 		})
-
-	} catch (e) {
-		console.error(e.message);
 	}
 }
 export { filterViews }
