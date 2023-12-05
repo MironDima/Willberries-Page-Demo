@@ -1,10 +1,13 @@
+import {changeLink, changeSearch, changeViewsAll} from "./modules/changeGoods";
+import {getData} from "./modules/getData";
+import { localstorageCheck } from "./modules/localstorageCheck";
 import { modal } from "./modules/modal";
-import { filterLink } from "./modules/filterLink";
-import { research } from "./modules/research";
-import { filterViews } from "./modules/filterViews";
+import { viewAll } from "./modules/viewAll";
 
-research()
+
 modal()
-filterLink()
-filterViews()
-
+getData('db/db.json').then(data => (data));
+localstorageCheck()
+changeLink()
+changeSearch()
+changeViewsAll()

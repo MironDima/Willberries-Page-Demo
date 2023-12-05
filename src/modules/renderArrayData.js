@@ -1,5 +1,5 @@
+
 const renderArrayData = (array) => {
-	JSON.parse(localStorage.getItem('key'));
 	const containerCard = document.querySelector('.long-goods-list');
 	containerCard.innerHTML = ''
 	array.forEach(item => {
@@ -20,7 +20,7 @@ const renderArrayData = (array) => {
 		containerCard.append(cardBlock)
 	});
 }
-export default renderArrayData
+export  {renderArrayData}
 
 
 // если есть данный  класс то мы скрываем
