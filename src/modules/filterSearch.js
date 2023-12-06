@@ -1,5 +1,4 @@
 import { renderArrayData } from "./renderArrayData"
-
 const filterSearch = (data, valueInput) => {
 	const filterSearchArray = data.filter(item => item.name.toLowerCase().includes(valueInput.toLowerCase()))
 	localStorage.setItem('array', JSON.stringify(data));

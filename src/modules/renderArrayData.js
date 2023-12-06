@@ -1,4 +1,3 @@
-
 const renderArrayData = (array) => {
 	const containerCard = document.querySelector('.long-goods-list');
 	containerCard.innerHTML = ''

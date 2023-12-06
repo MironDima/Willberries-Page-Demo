@@ -32,7 +32,6 @@ const changeViewsAll = () => {
 				getData('db/db.json').then(data => viewAll(data));
 			})
 		})
-
 	}
 	if (more) {
 		more.addEventListener('click', (e) => {
