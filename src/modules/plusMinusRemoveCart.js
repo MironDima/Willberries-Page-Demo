@@ -1,16 +1,16 @@
-
-
-const plusMinusRemoveCart = (tr) => {
+import { cardDeleteFunc } from "./cardDeleteFunc";
+import { cardMinusFunc } from "./cardMinusFunc";
+import { cardPlusFunc } from "./cardPlusFunc";
+const plusMinusRemoveCart = (tr, id) => {
 	tr.addEventListener('click', (e) => {
 		if (e.target.classList.contains('cart-btn-minus')) {
-			console.log('minus');
-			
+			cardMinusFunc(id);
 		}
 		else if (e.target.classList.contains('cart-btn-plus')) {
-			
+			cardPlusFunc(id);
 		}
 		else if (e.target.classList.contains('cart-btn-delete')) {
-			console.log('delete');
+			cardDeleteFunc(id);
 		}
 	})
 }

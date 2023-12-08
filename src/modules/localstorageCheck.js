@@ -4,5 +4,4 @@ const localstorageCheck = () => {
 		renderArrayData(JSON.parse(localStorage.getItem('array')));
 	}
 }
-
 export {localstorageCheck}

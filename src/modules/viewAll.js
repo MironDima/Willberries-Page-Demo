@@ -4,7 +4,6 @@ const viewAll = (data) => {
 		if(window.location.pathname !== '/goods.html') {
 			window.location.href = '/goods.html';
 		}else{
-			renderArrayData(data)
-		}	
-		}
+			renderArrayData(data);
+		}}
 export {viewAll}

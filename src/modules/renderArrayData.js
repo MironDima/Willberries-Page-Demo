@@ -14,12 +14,22 @@ const renderArrayData = (array) => {
 				<button class="button goods-card-btn add-to-cart" data-id=${item.id}>
 			<span class="button-price">$${item.price}</span>
 			</button>
-			</div>
-		`
-		containerCard.append(cardBlock)
+			</div>`
+		containerCard.append(cardBlock);
 	});
 }
 export  {renderArrayData}
+
+
+
+
+
+
+
+
+
+
+
 
 
 // если есть данный  класс то мы скрываем

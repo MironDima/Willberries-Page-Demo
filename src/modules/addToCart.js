@@ -1,23 +1,20 @@
 const addToCart = (id) => {
 	const array = JSON.parse(localStorage.getItem('array'));
-	const arrayFind = array.find(item =>  item.id === id);
-	const cart = localStorage.getItem('cart') ? 
-	JSON.parse(localStorage.getItem('cart')) : [];
-	if (cart.some(item => item.id === arrayFind.id)){
-		console.log('Необходимо увеличить товар');
+	const arrayFind = array.find(item => item.id === id);  //массив 
+	const cart = localStorage.getItem('cart') ?
+		JSON.parse(localStorage.getItem('cart')) : [];
+	if (cart.some(item => item.id === arrayFind.id)) {
 		cart.map(item => {
-			if(item.id === arrayFind.id){
+			if (item.id === arrayFind.id) {
 				item.count++;
 			}
 			return item
 		})
-	}else{
-		console.log('Необходимо добавить товар в корзину');
+	} else {
 		arrayFind.count = 1;
 		cart.push(arrayFind);
-		console.log(arrayFind);
 	}
-	localStorage.setItem('cart',JSON.stringify(cart));
+	localStorage.setItem('cart', JSON.stringify(cart));
 }
 export { addToCart }
 
