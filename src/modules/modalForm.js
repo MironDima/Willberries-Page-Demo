@@ -1,5 +1,6 @@
 import { sendForm } from "./sendForm";
 const modalForm = ({formClass, someElem = []}) => {
+
 	const modalForm = document.querySelector(formClass);
 	modalForm.addEventListener('submit', (e) => {
 		e.preventDefault();
@@ -14,6 +15,6 @@ const modalForm = ({formClass, someElem = []}) => {
 		const newElem = document.getElementById(elem.totalClass);
 			formBody[elem.totalClass] = (newElem.textContent).slice(0,-1);
 		})
-		sendForm(formBody,cartArray);
+		sendForm(formBody,cartArray)
 	})};
 export { modalForm }
