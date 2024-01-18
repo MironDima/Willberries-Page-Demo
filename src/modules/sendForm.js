@@ -2,6 +2,8 @@ import { validation } from "./validation"
 
 const sendForm = (formData, cartArray) => {
 	const modal = document.querySelector('.modal');
+	console.log(modal);
+	
 	const succesText = 'Данные отправлены!'
 	const errorText = 'Проверьте вводимые данные'
 	let statusBlock = document.createElement('div');
